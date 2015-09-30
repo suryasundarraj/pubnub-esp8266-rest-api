@@ -4,12 +4,12 @@ Pubnub Subscribe Sample
 #include <ArduinoJson.h>
 #include <ESP8266WiFi.h>
 
-const char* g_ssid       = "utsav";
-const char* g_password   = "utsavutsav22";
+const char* g_ssid       = "ssid";
+const char* g_password   = "password";
 const char* g_host       = "pubsub.pubnub.com";
 const char* g_pubKey     = "demo";
 const char* g_subKey     = "demo";
-const char* g_channel    = "surya";
+const char* g_channel    = "hello_world";
 String      timeToken    = "0";
 
 /*********************************************************************************

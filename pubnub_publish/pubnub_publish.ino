@@ -2,14 +2,7 @@
 PUBNUB PUBLISH DATA USING REST API
 *********************************************************************************/
 #include <ESP8266WiFi.h>
-
-const char* g_ssid      = "ssid";
-const char* g_password  = "password";
-const char* g_host      = "pubsub.pubnub.com";
-const char* g_pubKey    = "demo";
-const char* g_subKey    = "demo";
-const char* g_channel   = "hello_world";
-
+#include "settings.h"
 unsigned long g_startMillis;
 unsigned long g_switchTimeMillis;
 boolean       g_heaterInHighPhase;
@@ -27,10 +20,8 @@ void setup(void){
   Serial.println();
   Serial.println();
   Serial.print("Connecting to ");
-  Serial.println(g_ssid);
-  
-  WiFi.begin(g_ssid, g_password);
-  
+  Serial.println(WIFI_AP);
+  WiFi.begin(WIFI_AP, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");

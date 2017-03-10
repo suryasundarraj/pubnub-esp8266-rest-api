@@ -12,6 +12,10 @@ const char* g_subKey     = "sub-c-8ad89b4e-a95e-11e5-a65d-02ee2ddab7fe";
 const char* g_channel    = "locker_device";
 String      timeToken    = "0";
 
+typedef enum RET{
+  FAILURE = 0,
+  SUCCESS
+}RET_VALUE;
 /*********************************************************************************
   Function Name     : setup
   Description       : Initialize the Serial Communication with baud 115200, Begin
@@ -94,10 +98,11 @@ uint8_t json_handler(String p_json) {
   if (!json_parsed.success())
   {
     Serial.println("parseObject() failed");
-    return;
+    return FAILURE;
   }
   String key_parsed = json_parsed["text"];
   Serial.println(key_parsed);
+  return SUCCESS;
 }
 
 String string_parser(String data) {

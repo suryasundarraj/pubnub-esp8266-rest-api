@@ -98,6 +98,7 @@ uint8_t json_handler(String p_json) {
   if (!json_parsed.success())
   {
     Serial.println("parseObject() failed");
+    timeToken = "0";
     return FAILURE;
   }
   String key_parsed = json_parsed["text"];

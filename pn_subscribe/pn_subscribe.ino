@@ -4,12 +4,12 @@
 #include <ArduinoJson.h>
 #include <ESP8266WiFi.h>
 
-const char* g_ssid       = "radio";
-const char* g_password   = "radio@123";
+const char* g_ssid       = "SSID";
+const char* g_password   = "PASSWORD";
 const char* g_host       = "pubsub.pubnub.com";
-const char* g_pubKey     = "pub-c-913ab39c-d613-44b3-8622-2e56b8f5ea6d";
-const char* g_subKey     = "sub-c-8ad89b4e-a95e-11e5-a65d-02ee2ddab7fe";
-const char* g_channel    = "locker_device";
+const char* g_pubKey     = "pub-key";
+const char* g_subKey     = "sub-key";
+const char* g_channel    = "channel";
 String      timeToken    = "0";
 
 typedef enum RET{
